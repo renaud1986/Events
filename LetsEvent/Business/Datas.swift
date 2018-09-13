@@ -43,6 +43,7 @@ struct Event{
     var description:String
     var date:Date
     var heure:String
+    var adresse:Adresse
     var places:Int
     var tarifs:[Double]
 }

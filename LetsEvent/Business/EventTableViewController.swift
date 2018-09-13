@@ -10,8 +10,30 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
 
-    var events:[Event] = [Event(nom : "Lets Talk !",categorie: .Debats,description: "Discution sur le sida autour d'un verre",date: Date(),heure: "18h00",places: 300,tarifs: [8.0,15.0,10.0])]
-  
+    var events:[Event] = [Event(nom : "Lets Talk !",
+                                categorie: .Debats,
+                                description: "Discution sur le sida autour d'un verre",
+                                date: Date(),
+                                heure: "18h00",
+                                adresse: Adresse(rue: "rue des potirons",numero: "15",cp: 1150,localite:"Auderghem"),
+                                places: 300,
+                                tarifs: [8.0,15.0,10.0]),
+                          Event(nom : "Futuroscope",
+                                categorie: .Technologies,description: "Visite des differentes technologies de demain",
+                                date: Date(),
+                                heure: "19h00",
+                                adresse: Adresse(rue: "avenue des levriers",numero: "200A",cp: 1020,localite: "Schaerbeek"),
+                                places: 3000,
+                                tarifs: [12.0,18.0,13.0]),
+                          Event(nom: "Lets Party all Night",
+                                categorie: .Musique,
+                                description: "We will dance all the night and have some hot guest and a special DJ tonight !",
+                                date: Date(),
+                                heure: "22h",
+                                adresse: Adresse(rue: "chaussee aux moines",numero: "120B",cp: 1050,localite: "Ixelles"),
+                                places: 200,
+                                tarifs: [0.0,12.0,8.0])]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +70,10 @@ class EventTableViewController: UITableViewController {
         var entry = events[indexPath.row]
         
         cell.nameEventLabel.text = entry.nom
-        cell.categorieLabel.text = "\(entry.categorie)"
+        cell.categorieLabel.text = "<\(entry.categorie)>"
         cell.descriptionTextView.text = entry.description
         cell.dateTimeLabel.text = "\(entry.date)"
-        cell.priceLabel.text = "\(entry.tarifs[0]) € enfants"
+        cell.priceLabel.text = "Prix : \(entry.tarifs[0]) € enfants"
         return cell
     }
     
