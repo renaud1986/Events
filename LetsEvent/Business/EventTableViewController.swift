@@ -35,6 +35,7 @@ class EventTableViewController: UITableViewController {
                                 tarifs: [0.0,12.0,8.0])]
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
