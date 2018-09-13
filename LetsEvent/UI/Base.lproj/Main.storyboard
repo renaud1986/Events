@@ -111,7 +111,13 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="CRX-Lz-4a8" kind="show" action="showDetailViewController:sender:" id="d2f-2C-1RW"/>
+                                    <outlet property="categorieLabel" destination="je9-Dx-IvY" id="AzQ-Kk-XRo"/>
+                                    <outlet property="dateTimeLabel" destination="pHq-T2-fqm" id="MSp-jx-fqm"/>
+                                    <outlet property="descriptionTextView" destination="Vda-Kj-tzN" id="KES-gi-cIw"/>
+                                    <outlet property="eventImageView" destination="3qv-Uh-HKH" id="XwW-CL-Fth"/>
+                                    <outlet property="nameEventLabel" destination="BUN-vY-Bfe" id="EhZ-K7-DZm"/>
+                                    <outlet property="priceLabel" destination="Pho-Kf-YTd" id="2x3-dq-L9i"/>
+                                    <segue destination="CRX-Lz-4a8" kind="show" id="d2f-2C-1RW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1058,7 +1064,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBF-Wg-PMP">
-                                                            <rect key="frame" x="80" y="0.0" width="263" height="118"/>
+                                                            <rect key="frame" x="80" y="0.0" width="263" height="117.5"/>
                                                         </pickerView>
                                                     </subviews>
                                                 </stackView>
