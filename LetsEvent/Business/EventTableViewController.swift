@@ -42,7 +42,7 @@ class EventTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier:"EventCellIdentifier") as? EventCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:"EventCellIdentifier") as? CellEvent else{
             fatalError("Did not worked..")
         }
         var entry = events[indexPath.row]
