@@ -12,7 +12,7 @@ class EventTableViewController: UITableViewController {
 
     var events:[Event] = [Event(nom : "Lets Talk !",
                                 categorie: .Debats,
-                                description: "Discution sur le sida autour d'un verre",
+                                description: "Discussion sur le sida autour d'un verre",
                                 date: Date(),
                                 heure: "18h00",
                                 adresse: Adresse(rue: "rue des potirons",numero: "15",cp: 1150,localite:"Auderghem"),
@@ -73,8 +73,18 @@ class EventTableViewController: UITableViewController {
         cell.nameEventLabel.text = entry.nom
         cell.categorieLabel.text = "<\(entry.categorie)>"
         cell.descriptionTextView.text = entry.description
-        cell.dateTimeLabel.text = "\(entry.date)"
-        cell.priceLabel.text = "Prix : \(entry.tarifs[0]) € enfants"
+        let actualDate = entry.date
+        //let components = NSCalendar.current.dateComponents([.day, .month, .year,.hour], from: actualDate)
+        let dateFormatter = DateFormatter()
+        let timeFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        timeFormatter.dateFormat = "HH:mm"
+        timeFormatter.timeZone = TimeZone(identifier: "CET")
+        //timeFormatter.timeZone = TimeZone.current a utiliser pour suivre l'appareil de l'utilisateur
+        
+        cell.dateTimeLabel.text = dateFormatter.string(from: actualDate)
+        cell.timeLabel.text = timeFormatter.string(from: actualDate)
+        cell.priceLabel.text = "Prix : \(entry.tarifs[0]) € e. \(entry.tarifs[1]) € a."
         return cell
     }
     
@@ -114,14 +124,18 @@ class EventTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "showDetails"){
+         let detailsViewController = segue.destination as! DetailsViewController
+         let indexPath = tableView.indexPathForSelectedRow!
+         let selectedEvent = events[indexPath.row]
+         detailsViewController.currentEvent = selectedEvent
+        }
     }
-    */
-
 }

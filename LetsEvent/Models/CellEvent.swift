@@ -16,6 +16,7 @@ class CellEvent: UITableViewCell{
     @IBOutlet weak var categorieLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
 }
