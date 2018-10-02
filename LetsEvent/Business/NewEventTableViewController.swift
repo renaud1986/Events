@@ -10,7 +10,17 @@ import UIKit
 
 class NewEventTableViewController: UITableViewController {
 
+    @IBOutlet weak var newEventImage: UIImageView!
+    @IBOutlet weak var titreEvent: UITextField!
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var priceEvent: UITextField!
+    @IBOutlet weak var placesEvent: UITextField!
     
+    @IBAction func saveAndExit(_ sender: Any) {
+        
+    }
     
     
     override func viewDidLoad() {

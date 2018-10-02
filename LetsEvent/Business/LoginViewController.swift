@@ -10,6 +10,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var currentUser: User?
+    @IBOutlet weak var emailChecking: UITextField!
+    @IBOutlet weak var passwordChecking: UITextField!
+    
+    @IBAction func connexionPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func notInPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func forgotMdpPressed(_ sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

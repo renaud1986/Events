@@ -328,6 +328,9 @@
                                                 <state key="normal" title="Connexion">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="connexionPressed:" destination="XMY-1E-Vf5" eventType="touchUpInside" id="TCk-3y-ZUL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -340,6 +343,7 @@
                                                     <color key="titleColor" red="0.85514491579999996" green="0.1061571551" blue="0.0077268515789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="notInPressed:" destination="XMY-1E-Vf5" eventType="touchUpInside" id="R32-dE-HgL"/>
                                                     <segue destination="2tk-Ib-qD7" kind="show" id="wWf-s6-vqb"/>
                                                 </connections>
                                             </button>
@@ -348,6 +352,9 @@
                                                 <state key="normal" title="Mot de passe oublie?">
                                                     <color key="titleColor" red="0.20711050366182499" green="0.40454987046632129" blue="0.20275837411828396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="forgotMdpPressed:" destination="XMY-1E-Vf5" eventType="touchUpInside" id="6KX-9E-lks"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -370,6 +377,10 @@
                         <viewLayoutGuide key="safeArea" id="P43-cf-fRh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="yl9-Il-yso"/>
+                    <connections>
+                        <outlet property="emailChecking" destination="OPd-GW-B8x" id="yR3-Vw-ZWt"/>
+                        <outlet property="passwordChecking" destination="aeB-L7-7VQ" id="DRP-L2-F9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAZ-nh-IhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,6 +394,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wru-3o-D0i">
+                                <rect key="frame" x="0.0" y="94" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3gd-pW-i0B">
                                 <rect key="frame" x="20" y="174" width="374" height="503"/>
                                 <subviews>
@@ -543,6 +560,9 @@
                                                 <state key="normal" title="Reset">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="resetChanges:" destination="2tk-Ib-qD7" eventType="touchUpInside" id="3Et-BQ-ZRW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-L5-oDb">
                                                 <rect key="frame" x="195" y="29.666666666666742" width="179" height="30"/>
@@ -550,17 +570,14 @@
                                                 <state key="normal" title="Confirm">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="confirmChanges:" destination="2tk-Ib-qD7" eventType="touchUpInside" id="4Gr-kQ-wTF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wru-3o-D0i">
-                                <rect key="frame" x="0.0" y="94" width="414" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79209189099999999" green="0.86648152700000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -575,6 +592,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b5k-DI-nii"/>
                     </view>
+                    <connections>
+                        <outlet property="adresseUser" destination="JPU-qA-BFi" id="69y-T0-g2n"/>
+                        <outlet property="cpUser" destination="LzU-Xc-7WL" id="Zzx-yz-VNB"/>
+                        <outlet property="datePicker" destination="Qk3-QT-nJd" id="HoK-JA-a3d"/>
+                        <outlet property="emailUser" destination="xaa-Ec-TeR" id="x16-RJ-LbK"/>
+                        <outlet property="localiteUser" destination="jSG-lZ-eKw" id="VGR-F6-LXh"/>
+                        <outlet property="nomUser" destination="eNO-i0-Rd3" id="iFJ-JW-9iM"/>
+                        <outlet property="numeroUser" destination="17y-In-GIk" id="GLe-7L-TOR"/>
+                        <outlet property="passwordUser" destination="UDR-VW-6ZY" id="6AC-35-6hM"/>
+                        <outlet property="prenomUser" destination="gzL-7L-Cxw" id="rR7-VX-NdK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7L-98-BFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -760,6 +788,32 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Places" id="dsC-Kl-Xoi">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kXs-g3-UmJ">
+                                        <rect key="frame" x="0.0" y="955.33333333333337" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXs-g3-UmJ" id="dS6-d8-5kh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZq-UA-byd">
+                                                    <rect key="frame" x="16" y="5" width="382" height="33.666666666666664"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="nZq-UA-byd" secondAttribute="trailing" constant="16" id="6cf-AA-aT5"/>
+                                                <constraint firstItem="nZq-UA-byd" firstAttribute="leading" secondItem="dS6-d8-5kh" secondAttribute="leading" constant="16" id="G92-1B-tWb"/>
+                                                <constraint firstAttribute="bottom" secondItem="nZq-UA-byd" secondAttribute="bottom" constant="5" id="OcB-xn-2Ts"/>
+                                                <constraint firstItem="nZq-UA-byd" firstAttribute="top" secondItem="dS6-d8-5kh" secondAttribute="top" constant="5" id="gi4-rh-GMC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="GJ0-G4-Ryz" id="EOn-oc-eVQ"/>
@@ -771,6 +825,15 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="kTa-k9-p1o"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryPicker" destination="vlC-fb-nh1" id="UOt-hC-cb0"/>
+                        <outlet property="datePicker" destination="QCZ-rb-9IS" id="a70-px-WEe"/>
+                        <outlet property="descriptionTextView" destination="cch-HR-MQ5" id="dlK-3c-UgA"/>
+                        <outlet property="newEventImage" destination="As2-hV-anT" id="KNz-Uv-Lwi"/>
+                        <outlet property="placesEvent" destination="nZq-UA-byd" id="GaO-Fq-Xzb"/>
+                        <outlet property="priceEvent" destination="HWb-lp-xoB" id="Q5R-0v-Pn0"/>
+                        <outlet property="titreEvent" destination="yN6-Qd-tuv" id="Q8Q-Rs-kPc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zi7-K2-9N0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1110,10 +1173,27 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My profile" id="zJL-xd-Vo2">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="gXY-6h-vI8"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="gXY-6h-vI8">
+                            <connections>
+                                <action selector="saveAndExit:" destination="cWq-Lw-Idc" id="BgA-oW-GL6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="adresseTextField" destination="yMT-92-sE4" id="eDL-lb-YfT"/>
+                        <outlet property="categoryPicker" destination="GBF-Wg-PMP" id="KfG-Zn-xy6"/>
+                        <outlet property="cpTextField" destination="uza-69-43i" id="vyt-0g-vXk"/>
+                        <outlet property="emailTextField" destination="zlX-A7-1G3" id="c4c-vD-HHS"/>
+                        <outlet property="localiteTextField" destination="l6X-CD-v7f" id="kmg-LE-hQt"/>
+                        <outlet property="naissanceTextField" destination="RVZ-0a-eOj" id="PWq-uq-h2k"/>
+                        <outlet property="nomTextField" destination="D2E-sf-yog" id="Zbd-sK-2Wm"/>
+                        <outlet property="numeroTextField" destination="j4b-p9-99Q" id="vAP-mM-JrX"/>
+                        <outlet property="passwordTextField" destination="6Qm-mB-J9f" id="cti-V8-Tkw"/>
+                        <outlet property="prenomTextField" destination="MBs-UY-c9c" id="Uo3-MY-ORD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9u-8E-g1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cWq-Lw-Idc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="193" y="1227"/>
         </scene>

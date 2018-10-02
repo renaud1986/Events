@@ -10,6 +10,23 @@ import UIKit
 
 class InscriptionViewController: UIViewController {
 
+    @IBOutlet weak var nomUser: UITextField!
+    @IBOutlet weak var prenomUser: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var emailUser: UITextField!
+    @IBOutlet weak var passwordUser: UITextField!
+    @IBOutlet weak var adresseUser: UITextField!
+    @IBOutlet weak var numeroUser: UITextField!
+    @IBOutlet weak var cpUser: UITextField!
+    @IBOutlet weak var localiteUser: UITextField!
+    
+    @IBAction func resetChanges(_ sender: UIButton) {
+    }
+    
+    @IBAction func confirmChanges(_ sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

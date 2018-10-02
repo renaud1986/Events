@@ -10,6 +10,18 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
 
+    @IBOutlet weak var prenomTextField: UITextField!
+    @IBOutlet weak var nomTextField: UITextField!
+    @IBOutlet weak var adresseTextField: UITextField!
+    @IBOutlet weak var numeroTextField: UITextField!
+    @IBOutlet weak var cpTextField: UITextField!
+    @IBOutlet weak var localiteTextField: UITextField!
+    @IBOutlet weak var naissanceTextField: UILabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
