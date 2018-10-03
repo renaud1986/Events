@@ -28,6 +28,10 @@ class DetailsViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindToDetails(segue:UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormatter = DateFormatter()
@@ -61,5 +65,6 @@ class DetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
 }

@@ -14,7 +14,7 @@ struct User{
     var email:String
     var password:String
     var idProfile:Int
-    var idEvents:Int = 0
+    var events: [Int] = []
 }
 
 struct Profile{
@@ -38,6 +38,7 @@ struct Adresse{
 
 struct Event{
     
+    var idEvent:Int
     var nom:String
     var categorie:Categorie
     var description:String
@@ -46,6 +47,7 @@ struct Event{
     var adresse:Adresse
     var places:Int
     var tarifs:[Double]
+    
 }
 
 enum Categorie{

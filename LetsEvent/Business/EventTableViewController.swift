@@ -10,7 +10,7 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
 
-    var events:[Event] = [Event(nom : "Lets Talk !",
+    var events:[Event] = [Event(idEvent: 1,nom : "Lets Talk !",
                                 categorie: .Debats,
                                 description: "Discussion sur le sida autour d'un verre",
                                 date: Date(),
@@ -18,14 +18,14 @@ class EventTableViewController: UITableViewController {
                                 adresse: Adresse(rue: "rue des potirons",numero: "15",cp: 1150,localite:"Auderghem"),
                                 places: 300,
                                 tarifs: [8.0,15.0,10.0]),
-                          Event(nom : "Futuroscope",
+                          Event(idEvent: 2,nom : "Futuroscope",
                                 categorie: .Technologies,description: "Visite des differentes technologies de demain",
                                 date: Date(),
                                 heure: "19h00",
                                 adresse: Adresse(rue: "avenue des levriers",numero: "200A",cp: 1020,localite: "Schaerbeek"),
                                 places: 3000,
                                 tarifs: [12.0,18.0,13.0]),
-                          Event(nom: "Lets Party all Night",
+                          Event(idEvent: 3,nom: "Lets Party all Night",
                                 categorie: .Musique,
                                 description: "We will dance all the night and have some hot guest and a special DJ tonight !",
                                 date: Date(),
