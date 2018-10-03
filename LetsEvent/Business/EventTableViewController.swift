@@ -82,8 +82,8 @@ class EventTableViewController: UITableViewController {
         timeFormatter.timeZone = TimeZone(identifier: "CET")
         //timeFormatter.timeZone = TimeZone.current a utiliser pour suivre l'appareil de l'utilisateur
         
-        cell.dateTimeLabel.text = dateFormatter.string(from: actualDate)
-        cell.timeLabel.text = timeFormatter.string(from: actualDate)
+        cell.dateTimeLabel.text = "Date : \(dateFormatter.string(from: actualDate))"
+        cell.timeLabel.text = "Heure : \(timeFormatter.string(from: actualDate))"
         cell.priceLabel.text = "Prix : \(entry.tarifs[0]) € e. \(entry.tarifs[1]) € a."
         return cell
     }

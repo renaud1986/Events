@@ -148,12 +148,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IUv-4p-zKW">
-                                <rect key="frame" x="0.0" y="64" width="414" height="280"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="VTc-tF-7af"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JsT-cY-4Sd">
                                 <rect key="frame" x="16" y="364" width="382" height="312"/>
                                 <subviews>
@@ -238,16 +232,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i7c-gn-JHf">
+                                <rect key="frame" x="0.0" y="64" width="414" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="XH5-k3-dqW"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JsT-cY-4Sd" firstAttribute="leading" secondItem="Yj9-gw-SZA" secondAttribute="leading" constant="16" id="11e-xd-jWc"/>
-                            <constraint firstItem="IUv-4p-zKW" firstAttribute="trailing" secondItem="Yj9-gw-SZA" secondAttribute="trailing" id="6l4-LT-v7R"/>
+                            <constraint firstItem="Yj9-gw-SZA" firstAttribute="trailing" secondItem="i7c-gn-JHf" secondAttribute="trailing" id="8vI-aK-ApZ"/>
                             <constraint firstItem="Yj9-gw-SZA" firstAttribute="trailing" secondItem="JsT-cY-4Sd" secondAttribute="trailing" constant="16" id="C5u-4Q-h2L"/>
-                            <constraint firstItem="IUv-4p-zKW" firstAttribute="leading" secondItem="Yj9-gw-SZA" secondAttribute="leading" id="Ct3-2q-A0K"/>
                             <constraint firstAttribute="bottom" secondItem="JsT-cY-4Sd" secondAttribute="bottom" constant="60" id="RI3-de-dXI"/>
-                            <constraint firstItem="IUv-4p-zKW" firstAttribute="top" secondItem="Yj9-gw-SZA" secondAttribute="top" id="VM8-m9-cSo"/>
-                            <constraint firstItem="JsT-cY-4Sd" firstAttribute="top" secondItem="IUv-4p-zKW" secondAttribute="bottom" constant="20" id="rjv-Ci-suu"/>
+                            <constraint firstItem="i7c-gn-JHf" firstAttribute="leading" secondItem="Yj9-gw-SZA" secondAttribute="leading" id="YdM-A1-gui"/>
+                            <constraint firstItem="i7c-gn-JHf" firstAttribute="top" secondItem="Yj9-gw-SZA" secondAttribute="top" id="oNp-z5-A1w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yj9-gw-SZA"/>
                     </view>
