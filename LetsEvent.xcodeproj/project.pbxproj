@@ -23,6 +23,7 @@
 		D3E2069921495C6200BDDE57 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2069821495C6200BDDE57 /* Datas.swift */; };
 		D3E2069B2149700F00BDDE57 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2069A2149700F00BDDE57 /* EventTableViewController.swift */; };
 		D3E2069F214A7E6D00BDDE57 /* CellEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2069E214A7E6D00BDDE57 /* CellEvent.swift */; };
+		D3F0B9A921660B5500B26A73 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F0B9A821660B5500B26A73 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D3E2069821495C6200BDDE57 /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		D3E2069A2149700F00BDDE57 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		D3E2069E214A7E6D00BDDE57 /* CellEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEvent.swift; sourceTree = "<group>"; };
+		D3F0B9A821660B5500B26A73 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DF0DA4BF88E08FEEA1CB86AF /* Pods-LetsEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsEvent.release.xcconfig"; path = "Pods/Target Support Files/Pods-LetsEvent/Pods-LetsEvent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F0B9A921660B5500B26A73 /* CoreLocation.framework in Frameworks */,
 				2475EF3BFE53DD065B669D60 /* libPods-LetsEvent.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +110,7 @@
 		CCE8DE1E9F2F4E57B0297AAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3F0B9A821660B5500B26A73 /* CoreLocation.framework */,
 				7205EE4C641B221A0BB99A82 /* libPods-LetsEvent.a */,
 			);
 			name = Frameworks;
