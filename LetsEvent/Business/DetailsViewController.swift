@@ -17,6 +17,7 @@ class DetailsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     var currentUser: User?
     
     // variables about the mapView
+    let geoCoder = CLGeocoder()
     let position = CLLocationManager()
     var region = MKCoordinateRegion()
     var localisation = CLLocationCoordinate2D()
@@ -109,6 +110,22 @@ class DetailsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setCurrentLocation()
+        
+        /*
+          a placer cote mapView didSelect
+         
+         let location = CLLocation(latitude: coordinate.latitude,longitude: coordinate.longitude)
+         geoCoder.reverseGeocodeLocation(location){
+           (placemarks, error) in
+         if let error = error{
+             print(error)
+         }
+         else
+            if let placemark = placemarks?.first{
+              print(placemark)
+            }
+         
+        */
     }
     
     func initDetails(){

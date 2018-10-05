@@ -7,31 +7,37 @@
 //
 
 import UIKit
+import Firebase
+
 
 class LoginViewController: UIViewController {
 
     var currentUser: User?
     var nbEssais = 0
+    var isLoginOk = false
     @IBOutlet weak var emailChecking: UITextField!
     @IBOutlet weak var passwordChecking: UITextField!
     
     @IBAction func connexionPressed(_ sender: UIButton) {
         
         guard nbEssais < 3 else{
-            return goToInscription()
+            return performSegue(withIdentifier: "toInscription", sender: nil)
         }
         
         guard !(emailChecking.text?.isEmpty)!else{
             guard !(passwordChecking.text?.isEmpty)! else{
                nbEssais = nbEssais + 1
+               print(nbEssais)
                return showToast(message: "Les 2 champs sont vides !")
             }
                nbEssais = nbEssais + 1
+            print(nbEssais)
                return showToast(message: "L'email n'est pas rempli!")
         }
         
         guard  !(passwordChecking.text?.isEmpty)! else{
             nbEssais = nbEssais + 1;
+            print(nbEssais)
             return showToast(message: "Le mot de passe n'est pas rempli!")
         }
         
@@ -41,7 +47,20 @@ class LoginViewController: UIViewController {
         }
         
         // interroger ici la db sur firebase pour checker les 2 champs
-        
+        Auth.auth().signIn(withEmail: emailChecking.text!, password: passwordChecking.text!) { (user, error) in
+            if error == nil{
+                // tout est ok on retourne aux details
+                self.goBackToDetails()
+            }
+            else{
+                let alertController = UIAlertController(title: "Utilisateur inconnu", message: error?.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                self.nbEssais = self.nbEssais + 1
+            }
+        }
     }
     
     @IBAction func forgotMdpPressed(_ sender: UIButton) {
